@@ -587,4 +587,30 @@ header {
     .monitor-container__item {
         width: 96%;
     }
+    .control-panel__item--col-name {
+        white-space : nowrap; /* this does the trick */
+        overflow : hidden;
+    }
+    .contact-info {
+        white-space : nowrap; /* this does the trick */
+        overflow : hidden;
+    }
+    .contact-info--state-container {
+        display: inline-block;
+        width: 24%;
+        padding-top: 5px;
+    }
+    .contact-info--state {
+        display: inline-block;
+        text-align: center;
+        /* grid-template-columns: .25fr 1fr; */
+    }
+    .contact-info--state div {
+        
+        /* display: flex;
+        justify-self: left; */
+    }
+    .contact-info--state p {
+        display: none;
+    }
 }
