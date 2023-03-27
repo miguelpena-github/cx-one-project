@@ -23,6 +23,7 @@
     --monitor-blue: #3cccf4;
     --monitor-purple: rgb(152, 11, 152);
     --monitor-gray: #596467;
+    --header-blue: #3691D6;
 
 }
 body {
@@ -268,6 +269,10 @@ header {
     align-items: center;
     color: white; 
 }
+.queue-monitor--graph svg {
+    filter: var(--drop-shadow);
+
+}
 .queue-monitor--icons .red {
     background: #e42404;
 }
@@ -320,11 +325,91 @@ header {
     font-weight: 600;
     color: var(--light-gray);
 }
-/* .control-panel__item-status-container {
+.control-panel__item--col-name {
     display: block;
+    background: rgba(255, 255, 255, 0.642);
+    height: 30px;
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+}
+.control-panel__item--col-name .col-name__item {
+    display: inline-block;
+    width: 24%;
+    margin-top: 5px;
+    
+}
+.control-panel__item-status-container {
+    /* display: block; */
     width: 100%;
-} */
+}
+.control-panel__item-status-container .contact-info {
+    width: 100%;
+    background: #95c4e9a8;
+    /* background: white; */
+    /* height: 20px; */
+    height: 30px;
+    align-items: center;
+    padding-top: 2px;
+}
+.control-panel__item-status-container .contact-info:nth-child(even) {
+    background: white;
+}
+.contact-info .contact-info--name {
+    display: inline-block;
+    width: 24%;
+}
+.contact-info--state-container {
+    display: inline-block;
+    width: 24%;
+    padding-top: 5px;
 
+}
+.contact-info .contact-info--time {
+    display: inline-block;
+    width: 24%;
+
+}
+.contact-info .contact-info--team {
+    display: inline-block;
+    width: 24%;
+
+}
+.contact-info .contact-info--skill-name {
+    display: inline-block;
+    width: 24%;
+}
+.contact-info--state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-info--state p {
+    margin-left: 5px;
+}
+.state-circle--inbound {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #E32400;
+}
+.state-circle--unavail {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #E32400;
+}
+.state-circle--hold {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #E32400;
+}
+.state-circle--outbound {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #E32400;
+}
 
 /* ---------------------------- Media Query  ----------------------------------------- */
 
