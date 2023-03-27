@@ -1,0 +1,479 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+*:focus {
+    outline: none;
+}
+
+:root {
+    --header-background: rgb(54, 145, 214);
+    --light-gray: rgba(255, 255, 255, 0.834);
+    --drop-shadow: drop-shadow(5px 2px 2px #00000062);
+    --cx-one-drop-shadow: drop-shadow(0px 2px 10px #ffffff9e);
+    --nav-bar-blue: rgba(10, 132, 225, 0.882);
+    --app-picker-blue: rgb(5, 117, 176);
+    --red-file-icon: rgba(251, 39, 39, 0.791);
+    --question-mark-gray: rgba(255, 255, 255, 0.442);
+    --red-icon-color: #E32400;
+    --section-title-color: #171717a2;
+    --section-border-bottom: #9c9c9c6c;
+    --monitor-red: #e42404;
+    --monitor-blue: #3cccf4;
+    --monitor-purple: rgb(152, 11, 152);
+    --monitor-gray: #596467;
+
+}
+body {
+    font-family: sans-serif;
+    background: rgb(230, 244, 250);
+}
+header {
+    background: var(--header-background);
+    display: flex;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    padding: none;
+    justify-content: space-between;
+    /* position: absolute; */
+    position: sticky;
+    box-shadow: 0px 1px 5px 0px var(--header-background);
+    /* -webkit-box-shadow: 0px 6px 5px 0px rgba(191,189,191,0.47);
+    -moz-box-shadow: 0px 6px 5px 0px rgba(191,189,191,0.47);
+    box-shadow: 0px 6px 5px 0px rgba(191,189,191,0.47); */
+}
+
+/* -----------------------  Header Styles ----------------------- */
+
+.header__left-panel {
+    display: flex;
+}
+.header__app-picker-container {
+    width: 60px;
+    height: 60px;
+    background: var(--app-picker-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.header__title {
+    display: flex;
+    align-self:center;
+    cursor: pointer;
+}
+.header__title .header__title--icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 5s linear;
+    width: 100%;
+}
+.header__title--icon svg {
+    filter: var(--drop-shadow);
+}
+.header__title--icon h3 {
+    margin-left: 10px;
+    font-size: 1rem;
+    display: flex;
+    color: white;
+    font-weight: 600;
+}
+.header__logo {
+    display: flex;
+    margin-right: 60px;
+}
+.header__logo svg {
+    filter: var(--cx-one-drop-shadow);
+}
+.header__account {
+    display: flex;
+    margin-right: 25px;
+    /* width: 200px; */
+}
+.header__account--help {
+    display: flex;    
+    border-right: 1px solid var(--question-mark-gray);
+    padding-right: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.header__account--help i {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.442);
+    padding-right: 5px;
+}
+.header__account-user-container {
+    display: flex;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background: var(--light-gray);
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    filter: drop-shadow(0px 0px 9px #00000062);
+    cursor: pointer;
+}
+
+/*  ----------------  Content Area ------------------ */
+
+.content-area {
+    background: rgb(231, 243, 253);
+    display: flex;
+    width: 100%;
+}
+
+/* ------- ----------- Side Nav  -------------------- */
+
+.sidenav {
+    display: block;
+    width: 20%;
+    background: rgb(255, 255, 255);
+    /* height: 100vh; */
+    transition: width 1s;
+    padding-bottom: 50px;
+}
+.sidenav__item {
+    width: 100%;
+    display: block;
+    height: 3rem;
+    border-bottom: 1px solid var(--section-border-bottom);
+    margin-bottom: 10px;
+}
+
+.sidenav .sidenav__hide-section {
+    display: block;
+    padding-top: 15px;
+    /* width: 100%; */
+    height: 3rem;
+    margin-bottom: -2px;
+    /* margin-bottom: 25px; */
+    text-align: right;
+    color: rgba(148, 148, 148, 0.88);
+    width: 100%;
+    cursor: pointer;
+}
+.sidenav .sidenav__hide-section .outdent {
+    display: none;
+}
+.sidenav .sidenav__hide-section .indent {
+    font-size: 1.5rem;
+    margin-right: 8%;
+}
+.sidenav__item-section {
+    display: block;
+    border-bottom: 1px solid var(--section-border-bottom);
+    margin-bottom: 20px;
+}
+.sidenav__item-section:nth-last-child(1) {
+    border-bottom: none;
+}
+.sidenav__item-container {
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 20px; */
+    cursor: pointer;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+.section__item-title-container {
+    display: flex;
+    justify-content: space-between;
+    color: var(--section-title-color);
+    margin-left: 15px;
+    padding-bottom: 10px;
+    /* margin-bottom: 20px; */
+}
+.section__item-title-container i {
+    margin-right: 15px;
+}
+.section__item-title-container h3 {
+    font-weight: 600;
+}
+.sidenav__item--logo svg {
+    margin-left: 15px;
+    margin-right: 10px;
+    filter: var(--drop-shadow);
+}
+.sidenav__item--title {
+    color: rgb(56, 56, 56);
+}
+.sidenav__item-container {
+    /* background-color: #e3260057; */
+    width: 100%;
+}
+.sidenav__item-container:hover {
+    background: #9c9c9c6c;
+}
+
+/*  ------------ Dashboard  -------------- */
+
+.dashboard-container {
+    display: block;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* --------------  Monitor Section --------------- */
+
+.dashboard-container .monitor-container {
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 45px;
+    align-items: center;
+    justify-content:space-around;
+    transition: all 1s linear; 
+}
+.monitor-container__item {
+    /* display: flex; */
+    /* background: rgba(255, 255, 255, 0.365); */
+    background: rgba(255, 255, 255, 0.7);
+    width: 240px;
+    height: 125px;
+    box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.53);
+    border-radius: 5px;
+    margin: 0px 20px 20px 5px;    
+    overflow-x: hidden;
+    font-weight: 600;
+    color: rgb(91, 91, 91);
+}
+.monitor-container__item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+}
+.queue-monitor--icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.queue-monitor--icons .queue-monitor--icon {
+    display: flex;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+}
+.queue-monitor--icons .red {
+    background: #e42404;
+}
+.queue-monitor--icons .gray {
+    background: #596467;
+}
+.queue-monitor--icons .purple {
+    background: rgb(152, 11, 152);
+}
+.queue-monitor--icons .blue {
+    background: #3cccf4;
+}
+
+/* --------------- Control Panel -------------------- */
+
+.dashboard-container .control-panel-container {
+    flex-wrap: nowrap;
+    display: flex;
+    width: 100%;
+    height: 500px;
+    align-items:center;
+    justify-content:space-around;
+    transition: all 1s linear;
+    /* background: red; */
+}
+.control-panel-container .control-panel__item {
+    display: flex;
+    /* background: rgba(255, 255, 255, 0.365); */
+    background: rgba(255, 255, 255, 0.7);
+    width: 47%;
+    height: 500px;
+    box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.53);
+    border-radius: 10px;
+    margin: 20px 0px 0px 0px;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+.control-panel__item--container {
+    width: 100%;
+}
+.control-panel__item--header {
+    display: block;
+    height: 30px;
+    width: 100%;
+    background: #3691D6;
+    text-align: center;
+}
+.control-panel__item--header h3 {
+    padding-top: 5px;
+    font-weight: 600;
+    color: var(--light-gray);
+}
+/* .control-panel__item-status-container {
+    display: block;
+    width: 100%;
+} */
+
+
+/* ---------------------------- Media Query  ----------------------------------------- */
+
+@media screen and (max-width: 1111px) {
+    .dashboard-container .monitor-container {
+        /* flex-direction: column; */
+        width: 100%;
+    }    
+    .monitor-container__item {
+        /* width: 96%; */
+        /* margin-bottom: 20px; */
+        margin: 0px 0px 20px 0px;
+    }
+}
+
+@media only screen and (max-width: 1011px){
+
+    /* ------ Header Media Queries --------- */
+
+    header {
+        height: 55px;
+    }
+    .header__app-picker-container {
+        height: 55px;
+    }
+    .header__title--icon i {
+        display: none;
+    } 
+    .header__title--icon svg {
+        display: none;
+        opacity: 0;
+    } 
+    .header__title--icon h3 {
+        opacity: 0;
+        display: none;
+    } 
+    .header__logo {
+        margin: 0px;
+    }
+    .header__account--help {
+        display: none;
+    }
+    .header__account-user-container {
+        margin: 0px;
+    }
+
+    /* --------- Content Area Media Query ------------- */
+
+    .content-area {
+        display: flex;
+    }
+    .dashboard-container {
+        width: 90%;
+    }
+
+    /* ---------Side Nav Media Query --------- */
+
+    .sidenav {
+        width: 60px;
+    }
+    .sidenav .sidenav__hide-section {
+        text-align: center;
+    }
+    .sidenav .sidenav__hide-section .indent {
+        display: none;
+    }
+    .sidenav .sidenav__hide-section .outdent {
+        display: block;
+        font-size: 1.5rem;
+    }
+    .section__item-title-container h3 {
+        display: none;
+    }
+    .section__item-title-container {
+        justify-content: center;
+    }
+    .sidenav__item--title {
+        display: none;
+    }
+    .sidenav__item--logo {
+        margin: 0px;
+        justify-content: center;
+    }
+
+    /* ------------ Control Panel Media Query -------------- */
+    .control-panel-container {
+        flex-direction: column;
+    }
+    .control-panel-container .control-panel__item {
+        width: 96%;
+    }
+}
+
+@media only screen and (max-width: 710px) {
+
+    /* -------- Dashboard / Monitor Media Query ---------- */
+
+    /* .dashboard-container .monitor-container {
+        flex-direction: column;
+        width: 100%;
+    } */
+    /* .monitor-container__item {
+        width: 96%;
+        /* margin-bottom: 20px; */
+        /* margin: 0px 0px 20px 0px;
+    } */ 
+
+}
+
+@media only screen and (max-width: 670px) {
+
+    /* --------- Content Area Media Query --------- */
+
+    .content-area {
+        display: block;
+    }
+
+    /* ---------- Side Nav Media Query --------- */
+
+    .sidenav {
+        display: block;
+        padding-bottom: 0;
+        width: 100%;
+    }
+    .sidenav__item-section {
+        display: none;
+        padding-top: 0;
+    }
+    .sidenav__hide-section {
+        display: block;
+        padding-bottom: 15px;
+        align-items: center;
+    }
+    .sidenav__hide-section i {
+        float: left;
+        padding-left: 20px;
+    }
+
+    /* ---------Dashboard / Monitor Media Query ----------- */
+
+    .dashboard-container .monitor-container {
+        flex-wrap: wrap;
+        justify-content: column;
+        margin-top: 15px;
+    }
+
+}
+@media only screen and (max-width: 568px) {
+    .monitor-container__item {
+        width: 96%;
+    }
+}
