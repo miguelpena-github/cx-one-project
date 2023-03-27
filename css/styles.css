@@ -605,11 +605,6 @@ header {
         text-align: center;
         /* grid-template-columns: .25fr 1fr; */
     }
-    .contact-info--state div {
-        
-        /* display: flex;
-        justify-self: left; */
-    }
     .contact-info--state p {
         display: none;
     }
